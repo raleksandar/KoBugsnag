@@ -1,0 +1,3 @@
+[submodule "vendor/bugsnag-php"]
+	path = vendor/bugsnag-php
+	url = https://github.com/raleksandar/bugsnag-php.git
