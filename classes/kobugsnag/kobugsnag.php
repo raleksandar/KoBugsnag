@@ -67,7 +67,9 @@ abstract class KoBugsnag_KoBugsnag extends Bugsnag
      */
     public static function exceptionHandler($exception)
     {
-        parent::exceptionHandler($exception);
+        $session = Session::instance();
+        $session_data = $session->as_array();
+        parent::notifyException($exception, $session_data);
 
         if (Kohana::$errors === true)
         {
